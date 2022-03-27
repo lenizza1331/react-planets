@@ -1,38 +1,113 @@
-.App {
+.picture img {
+  max-width: 700px;
+  border-radius: 10px;
+  position: relative;
+  animation: moving 3.5s linear infinite alternate ;
+}
+.picture img:hover {
+  animation-play-state: paused;
+}
+
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  50% {
+    transform: scale(.8) rotate(10deg);
+  }
+  100% {
+    left: 120px;
+  }
+}
+
+
+body {
+  background-color: black;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.between{
+  display: flex;
+  justify-content: space-evenly;
+}
+.between button {
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-family: 'Comfortaa', cursive;
+  background-color: rgb(28, 28, 44);
+  padding: 15px 30px;
+  border-radius: 10px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+}
+.page {
+  max-width: 80vw;
+}
+h1 {
+  font-family: 'Cormorant Infant', serif;
+  font-size: 60px;
+  color: rgb(238, 233, 206);
+
+}
+h2 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 35px;
+  color: rgb(199, 238, 247);
+
+}
+p {
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 200%;
+  color: rgb(224, 229, 240);
+  font-family: 'Mulish', sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn {
+  border: none;
+  background-color: rgb(20, 20, 22);
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Mulish', sans-serif;
+border-radius: 5px;
+padding:4px 10px;
+cursor: pointer;
+transition: all .5s ease;
+}
+.btn:hover {
+  transform: scale(.95);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+@media all and (max-width:800px){
+  h2 {
+    font-size: 25px;
+    text-align: center;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  p{
+    font-size: 16px;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .picture img{
+    width: 200px;
+    animation: smallMoving 4s linear infinite alternate;
+  }
+  @keyframes smallMoving {
+    0% {
+      left: 0px;
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      left:30px;
+    }
+    
   }
 }
